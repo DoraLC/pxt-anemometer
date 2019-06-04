@@ -1,0 +1,17 @@
+{
+    "name": "pxt-anemometer",
+    "version": "0.0.1",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": false
+}
