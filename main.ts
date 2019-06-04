@@ -17,7 +17,7 @@ namespace anemometer{
      * Return wind speed in m/s.
      * @param t time interval; eg: 1, 2, 3, 5, 10
      */
-    //%block="Wind Speed %t"
+    //%block="Wind Speed time interval (s) %t "
     export function speed(t: number): number {
         n = 0;
         basic.pause(t * 1000);
