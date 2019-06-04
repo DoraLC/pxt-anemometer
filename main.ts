@@ -1,4 +1,4 @@
-//%color=#50F72E icon="\uf72e" block="anemometer"
+//%color=#50F72E icon="\uf121" block="anemometer"
 namespace anemometer{
     const pi: number = 3.14;
     const r: number = 0.075;
