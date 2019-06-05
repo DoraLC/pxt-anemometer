@@ -6,7 +6,7 @@ namespace anemometer {
 
     let n: number = 0;
     let v: number = 0;
-    let pin_arg: DigitalPin = DigitalPin.P2;
+    //let pin_arg: DigitalPin = DigitalPin.P2;
 
     function cal(t: number) {
         const threshold: number = 1.3;
@@ -20,15 +20,17 @@ namespace anemometer {
      * @param pinArg pin connected to the sensor; eg: DigitalPin.P2
      */
     //%block="Wind Speed time intervals(s) %t | pin %pinArg"
+    //% pinArg.fieldEditor="gridpicker" pinArg.fieldOptions.columns=3
+    //% pinArg.fieldOptions.tooltips="false"
     export function speed(t: number, pinArg: DigitalPin): number {
-        pin_arg = pinArg
         n = 0;
+        pins.onPulsed(pinArg, PulseValue.High, function () {
+            n++;
+        })
         basic.pause(t * 1000);
         cal(t);
         return v;
     }
 
-    pins.onPulsed(pin_arg, PulseValue.High, function () {
-        n++;
-    })
+    
 }
