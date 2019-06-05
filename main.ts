@@ -17,6 +17,7 @@ namespace anemometer {
     /**
      * Return wind speed in m/s.
      * @param t time interval; eg: 1, 2, 3, 5, 10
+     * @param pinArg pin connected to the sensor; eg: DigitalPin.P2
      */
     //%block="Wind Speed time intervals(s) %t | pin %pinArg"
     export function speed(t: number, pinArg: DigitalPin): number {
