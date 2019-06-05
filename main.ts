@@ -31,6 +31,4 @@ namespace anemometer {
         cal(t);
         return v;
     }
-
-    
 }
